@@ -70,5 +70,4 @@ model_name = "mistralai/Mistral-7B-v0.1"  # Example: A larger, more capable mode
 #model_name = "EleutherAI/pythia-70m" # Example:  A smaller, faster model for testing.
 #model_name = 'gpt2' #Another smaller, faster model
 layer_index = 2  # Inspect the third layer (index 2)
-login("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")
 print_query_matrix(model_name, device="cpu", layer_index=layer_index)
