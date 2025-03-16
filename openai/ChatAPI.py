@@ -19,12 +19,26 @@ def generate_response(prompt, temperature=0.7):
     )
     return response.choices[0].message.content
 
-# Example prompts
-factual_prompt = "Explain quantum superposition in simple terms"
-creative_prompt = "Write a short poem about AI ethics"
-print(generate_response(factual_prompt, 0.2))
-# Output: Clear, textbook-style explanation with consistent technical terms [2][5]
+def print_response_with_factual_prompt(prompt="Explain quantum superposition in simple terms"):
+    print(generate_response(prompt,temperature=0.0))
 
-print(generate_response(creative_prompt, 0.7))
-# Output: Structured poem with coherent theme and some creative metaphors [7][8]
+def print_response_with_creative_prompt(prompt="Write a short poem about AI ethics"):
+    print(generate_response(prompt,temperature=0.7))
+
+def print_response_with_tools(prompt="How old was Gandhi when India got independent"):
+    prompt_with_tools = f""" 
+    Tools:
+    - calculator: This tool accepts math expressions and return results
+    - search: This tool performs web search for a given query
+    If you want tools to arrive at the answer list the tools to be used.
+    Here is the input prompt : {prompt}
+    """
+    print(generate_response(prompt_with_tools))
+
+
+if __name__ == '__main__':
+    print_response_with_tools()
+
+
+
 
