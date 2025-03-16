@@ -172,3 +172,8 @@ cython_debug/
 # PyPI configuration file
 .pypirc
 ./medical_kbase/*
+/medical_kbase/chroma.sqlite3
+/medical_kbase/6ea17c43-9b1f-4a57-8932-61c712e42c51/data_level0.bin
+/medical_kbase/6ea17c43-9b1f-4a57-8932-61c712e42c51/header.bin
+/medical_kbase/6ea17c43-9b1f-4a57-8932-61c712e42c51/length.bin
+/medical_kbase/6ea17c43-9b1f-4a57-8932-61c712e42c51/link_lists.bin
