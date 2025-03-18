@@ -1,10 +1,10 @@
 from langchain_core.messages import SystemMessage, HumanMessage
 
-from langchain.model_utils import init_and_get_model
+from langchain.model_utils import init_and_get_model, get_azure_model
 
 
 def simple_invoke():
-    response = init_and_get_model().invoke("The sky is")
+    response = get_azure_model().invoke("The sky is")
     print(response.content)
 
 def invoke_with_message_types():
